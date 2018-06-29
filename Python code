@@ -3,6 +3,8 @@ import statsmodels.api as stats
 import statsmodels.tsa.stattools as ty
 import quandl
 
+#data1, data2
+
 result=stat.OLS(data1['Close'],data2['Close']).fit()
 c_t=ts.adfuller(result.resid)
 
