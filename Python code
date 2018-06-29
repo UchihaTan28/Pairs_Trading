@@ -1,0 +1,13 @@
+import numpy as np
+import statsmodels.api as stats
+import statsmodels.tsa.stattools as ty
+import quandl
+
+result=stat.OLS(data1['Close'],data2['Close']).fit()
+c_t=ts.adfuller(result.resid)
+
+if c_t[0]<=c_t[4]['10%'] and c_t[1]<=0.1 :
+ print('Pair of stocks is co-integrated.')
+else :
+ print('Pair of stocks is not co-integrated.')
+
